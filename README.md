@@ -27,7 +27,8 @@ On the Itiner-e site, if you click on any route segment and click on the details
 you will see more information on the route. One of the fields in the details tab is url/uri
 
 An itiner-e url/uri looks like this 
-itiner-e.org/route-segment/27204 
+
+**itiner-e.org/route-segment/27204**
 
 The final number is the route segment's itiner-e ID. They are not always 5 digits long so if yours isn't dont be alarmed.
 
