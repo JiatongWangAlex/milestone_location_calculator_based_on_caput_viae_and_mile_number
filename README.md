@@ -115,7 +115,7 @@ If you are interested in my thesis project (which did not end up relying on thes
     ```bash
     ITINER_E_FILE = "name_of_your_download.ndjson"
 
-    ```bash
+
     OUTPUT_FILE = "name_of_your_road.json"
 
 
@@ -124,10 +124,10 @@ If you are interested in my thesis project (which did not end up relying on thes
     ```bash
     INPUT_FILE = "name_of_your_road.json"
 
-    ```bash
+
     TOTAL_ROUTE_ROMAN_MILES = total length of the route in Roman miles
 
-    ```bash
+
     TARGET_ROMAN_MILES = mile number of your milestone      
 
 
