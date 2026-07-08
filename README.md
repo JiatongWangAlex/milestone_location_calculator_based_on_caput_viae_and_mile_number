@@ -97,7 +97,7 @@ If you are interested in my thesis project (which did not end up relying on thes
 ## How to Run the Scripts
 
 <details>
-<summary><b>Click here for step-by-step instructions on how to open these scripts using the Terminal / Command Line</b></summary>
+<summary><b>Click here for step-by-step instructions on how to run these scripts using the Terminal / Command Line</b></summary>
 
 ### Step 1: Downloading the scripts
 1) Click the green button Code to open a dropdown menu. From there, click the button download zip
