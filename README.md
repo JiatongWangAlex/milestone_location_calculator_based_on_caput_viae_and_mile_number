@@ -1,5 +1,6 @@
 # Milestone Location Calculator
-Two python scripts, one to stitch together a series of Itiner-e road segments into one .json asset, another to calculate the location of any milestone on that road given its mile number. 
+
+If you ever encounter a Roman milestone (for which the caput viae and mile number is known), divorced from its original context, or published under a legacy place name that is no longer identifiable, this calculator will help you estimate where it originally stood.
 
 In order to use this calculator, you MUST know a) the (Roman) mile number of your milestone, b) the caput viae of the road your milestone served c) the Itiner-e ID's of the route segments making up that road, d) the total length of the road in (Roman) miles
 
