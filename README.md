@@ -63,12 +63,6 @@ https://omnesviae.org/tabula is a very good online tool based on the Peutinger t
 
 If your route is not in the Peutinger tablet, try the Itinerarium Antonini Augusti; unfortunately there isn't a similar online tool for consulting it. 
 
-## All Rights and Credits for the dataset go to the Itiner-e Project
-The dataset (itiner_e_land_routes_only.ndjson) used to produce the combined road asset is a modified version of the dataset published by the Itiner-e project. It is basically that dataset, but without the sea routes. I don't imagine there'd be a lot of milestones in the sea. 
-
-All rights and credits for the dataset used by these scripts belong entirely to the Itiner-e project. 
-
-
 ## Why did I make this?
 
 I made this because there was a cluster of milestones reused in a medieval bridge in Aquae Flaviae, 6 of which, tantalisingly, records both the caput viae of the road and the mile number. I thought this was definitely enough information for us to have a rough estimate of where they originally stood, so I made this calculator.
