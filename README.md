@@ -48,6 +48,7 @@ But it's bad practice. Please actually name the OUTPUT_FILE.
 
 ## mile_based_location.py
 Using the output of the first script, you can calculate a coordinate for any mile number on that road.
+
 Remember to set up the configuration block properly before running the script.
 
 Set the INPUT_FILE to the name of your OUTPUT_FILE from route_extraction.py
@@ -56,7 +57,9 @@ Set the total length of your road in Roman miles.*
 
 Set the mile number of your milestone.
 
-Then run the script. 
+Then run the script.
+
+
 The approximate coordinate of your milestone based on its mile number and caput viae will be printed in your terminal.
 
 ### Finding the total length of your road in Roman miles
@@ -64,18 +67,27 @@ This can take a bit more work, but we rely on it to make an accurate calculation
 
 https://omnesviae.org/tabula is a very good online tool based on the Peutinger tablet. However, please be careful. Do not rely on their route-planning function to find your route-- it will find you the shortest route between point A and point B but not necessarily the route you are looking for. I would advise going segment by segment and tallying the miles up along the way. 
 
+
 If your route is not in the Peutinger tablet, try the Itinerarium Antonini Augusti; unfortunately there isn't a similar online tool for consulting it. 
 
 ## Why did I make this?
 
 I made this because there was a cluster of milestones reused in a medieval bridge in Aquae Flaviae; 6 of which, tantalisingly, records both the caput viae of the road and the mile number. I thought this was definitely enough information for us to have a rough estimate of where they originally stood, so I made this calculator.
 
+
 One major design hurdle I encountered while making this calculator was the coastline paradox. The more detailed a road asset is, the "longer" it becomes due to all the kinks and bends. If we simply convert Roman miles to kms and attempt to plot the milestone at the Xth km of the very detailed Itiner-e based route asset, we would be at the mercy of the coastline paradox. 
 
 Therefore, to sidestep this entirely, the calculator uses percentage, not a raw conversion from Roman miles to km. 
+
+
 FIRST: It calculates the Xth mile of a road Y miles long is Zth percent of the road
+
+
 THEN: it looks at the unified route asset, grabs its total length in KM, and multiplies the total length of the route asset by Z percent.
+
+
 FINALLY: it "crawls" along the route asset and finds the (Z percent x total length) km mark and prints that coordinate
+
 
 If you ever encounter a Roman milestone,  divorced from their original context, or published under a legacy place name that is no longer identifiable, for which the caput viae and mile number is known, this calculator will help you estimate where they originally stood. 
 
