@@ -7,9 +7,11 @@ In order to use this calculator, you MUST know a) the (Roman) mile number of you
 I made this because while working on my thesis I encountered a cluster of milestones reused in a medieval bridge in Aquae Flaviae; 6 of which, tantalisingly, records both the caput viae of the road and the mile number. I thought this was definitely enough information for us to have a rough estimate of where they originally stood, so I made this calculator.
 
 
-One major design hurdle I encountered while making this calculator was the coastline paradox. The more detailed a road asset is, the "longer" it becomes due to all the kinks and bends. If we simply convert Roman miles to kms and attempt to plot the milestone at the Xth km of the very detailed Itiner-e based route asset, we would be at the mercy of the coastline paradox. 
+One major design hurdle I encountered while making this calculator was the coastline paradox. The more detailed a road asset is, the "longer" it becomes due to all the kinks and bends. If we simply convert Roman miles to kms and attempt to plot the milestone at the Xth km of the very detailed Itiner-e based route asset, we would be at the mercy of the coastline paradox.
 
-Therefore, to sidestep this entirely, the calculator uses percentage, not a raw conversion from Roman miles to kilometers. 
+For example, according to the Itinerarium Antonini Augusti, the road between Bracara Augusta and Aquae Flaviae is 80 Roman miles long (20+26+16+18=80) But the total length of all Itiner-e road segments making up that road is almost 124 Roman miles (183.36 km)! This means if we simply convert our milestone's mile number into Roman miles, and try to plot it on the road, we will be very far off. Using this method, a milestone marking the 80th mile, i.e. the final mile of the road that should be at the gates of Aquae Flaviae, would be plotted to a location almost 65 km away from Aquae Flaviae
+
+Therefore, to sidestep this paradox, my calculator uses percentage, instead of a raw conversion from Roman miles to kilometers. 
 
 For a milestone on the Xth mile of a road Y miles long:
 
