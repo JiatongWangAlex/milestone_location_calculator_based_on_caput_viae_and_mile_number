@@ -79,6 +79,14 @@ The final number is the route segment's itiner-e ID. They are not always 5 digit
 
 Try to track your road from start to finish on the Itiner-e Project and copy the ID of each segment as you go along.
 
+Remember to paste all ID's in order into the file
+
+     ```bash
+      TARGET_IDS = [
+      123456, 123457, 123458, 
+      ]
+
+
 ### Configuring and Running the Script
 After this, the first script can stitch all the route segments together for you. 
 
