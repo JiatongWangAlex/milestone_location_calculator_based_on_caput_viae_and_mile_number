@@ -56,7 +56,7 @@ I made this because there was a cluster of milestones reused in a medieval bridg
 
 One major design hurdle I encountered while making this calculator was the coastline paradox. The more detailed a road asset is, the "longer" it becomes due to all the kinks and bends. If we simply convert Roman miles to kms and attempt to plot the milestone at the Xth km of the very detailed Itiner-e based route asset, we would be at the mercy of the coastline paradox. 
 
-Therefore sidestep this entirely, the calculator uses percentage, not a raw conversion from Roman miles to km. 
+Therefore, to sidestep this entirely, the calculator uses percentage, not a raw conversion from Roman miles to km. 
 FIRST: It calculates the Xth mile of a road Y miles long is Zth percent of the road
 THEN: it looks at the unified route asset, grabs its total length in KM, and multiplies the total length of the route asset by Z percent.
 FINALLY: it "crawls" along the route asset and finds the (Z percent x total length) km mark and prints that coordinate
