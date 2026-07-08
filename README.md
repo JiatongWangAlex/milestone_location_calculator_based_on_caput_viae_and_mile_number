@@ -145,6 +145,8 @@ If your route is not in the Peutinger tablet, try the Itinerarium Antonini Augus
 
 
     OUTPUT_FILE = "name_of_your_road.json"
+    
+    TARGET_IDS = [your itiner road segment id 1, your itinere road segment id 2, your itinere road segment id 3]
 
 
 3) Open mile_based_location.py, edit the Configuration block at the very top so that
