@@ -112,21 +112,22 @@ If you are interested in my thesis project (which did not end up relying on thes
 ### Step 3: Configure route_extraction.py and mile_based_location.py
 1) Open route_extraction.py, edit the Configuration block on the very top so that
 
-
+    ```bash
     ITINER_E_FILE = "name_of_your_download.ndjson"
 
-
+    ```bash
     OUTPUT_FILE = "name_of_your_road.json"
 
 
 3) Open mile_based_location.py, edit the Configuration block at the very top so that
 
+    ```bash
     INPUT_FILE = "name_of_your_road.json"
 
-   
+    ```bash
     TOTAL_ROUTE_ROMAN_MILES = total length of the route in Roman miles
 
-   
+    ```bash
     TARGET_ROMAN_MILES = mile number of your milestone      
 
 
