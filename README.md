@@ -90,3 +90,98 @@ FINALLY: it "crawls" along the route asset and finds the (Z percent x total leng
 If you ever encounter a Roman milestone (for which the caput viae and mile number is known),  divorced from its original context, or published under a legacy place name that is no longer identifiable, this calculator will help you estimate where it originally stood. 
 
 If you are interested in my thesis project (which did not end up relying on these calculations, but it was a fun detour), see https://maximinusthraxdatabaseui.streamlit.app/
+
+
+
+
+## How to Run the Application
+
+<details>
+<summary><b>Click here for step-by-step instructions on how to open this app using the Terminal / Command Line</b></summary>
+
+### Step 1: Downloading the scripts
+1) Click the green button Code to open a dropdown menu. From there, click the button download zip
+2) Find your downloaded file milestone_location_calculator_based_on_caput_viae_and_mile_number-main.zip and move it to your desktop
+3) **Open the file milestone_location_calculator_based_on_caput_viae_and_mile_number-main.zip**, this should unzip it and create a new folder named milestone_location_calculator_based_on_caput_viae_and_mile_number-main on your desktop
+4) Now everything is set up!
+
+### Step 2: Downloading the Itiner-e Data
+1) Go to the Itiner-e Project's About page https://itiner-e.org/about
+2) Click Download Latest Export
+3) Drag the file you downloaded from your downloads folder into the milestone_location_calculator_based_on_caput_viae_and_mile_number-main folder.
+### Step 3: Configure route_extraction.py and mile_based_location.py
+1) Open route_extraction.py, edit the Configuration block on the very top so that
+
+
+ITINER_E_FILE = "name_of_your_download.ndjson"
+OUTPUT_FILE = "name_of_your_road.json"
+
+
+2) Open mile_based_location.py, edit the Configuration block at the very top sothat
+
+INPUT_FILE = "name_of_your_road.json"
+TOTAL_ROUTE_ROMAN_MILES = total length of the route in Roman miles   
+TARGET_ROMAN_MILES = mile number of your milestone      
+
+
+### Step 4: Open your Terminal / Command Line
+Depending on your operating system, open your computer's command line interface:
+* **Windows:** Press the **Windows Key**, type `cmd` (or `Command Prompt`), and press **Enter**.
+* **Mac:** Press **Cmd + Spacebar**, type `Terminal`, and press **Enter**.
+* **Linux:** Press **Ctrl + Alt + T**.
+
+
+### Step 5: Navigate to your project folder
+You need to point the terminal to the folder where you have saved the script and ndjson file. 
+
+Type `cd ` followed by **a space**, and then type your folder's path. See tip for how to find your folder's path!
+
+> **Tip:** To avoid typing out long paths manually, type `cd ` (with **a space** after it), and then **drag and drop the folder** from your desktop directly into the terminal window. It will automatically fill in the path for you! Then press **Enter**.
+
+### Step 6: Run route_extraction.py
+Once your terminal is inside the correct directory, type one of the following commands and press **Enter** to launch the interface:
+
+* **Windows:**
+  ```bash
+  python route_extraction.py
+
+* or
+  
+  ```bash
+  python route_extraction.py
+  
+* **Mac and Linux**
+  ```bash
+  python3 route_extraction.py
+
+* or
+  
+  ```bash
+  python3 route_extraction.py
+
+
+### Step 7: Run mile_based_location.py
+Once your terminal is inside the correct directory, type one of the following commands and press **Enter** to launch the interface:
+
+* **Windows:**
+  ```bash
+  python mile_based_location.py
+
+* or
+  
+  ```bash
+  python mile_based_location.py
+  
+* **Mac and Linux**
+  ```bash
+  python3 mile_based_location.py
+
+* or
+  
+  ```bash
+  python3 mile_based_location.py
+
+
+
+</details>
+---
