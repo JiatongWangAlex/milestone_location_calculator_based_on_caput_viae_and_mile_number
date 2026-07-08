@@ -1,7 +1,7 @@
 # Milestone Location Calculator
 Two python scripts, one to stitch together a series of Itiner-e road segments into one .json asset, another to calculate the location of any milestone on that road given its mile number. 
 
-In order to use this calculator, you MUST know a) the mile number of your milestone , b) the caput viae of the road your milestone served c) the Itiner-e ID's of the route segments making up that road
+In order to use this calculator, you MUST know a) the (Roman) mile number of your milestone, b) the caput viae of the road your milestone served c) the Itiner-e ID's of the route segments making up that road, d) the total length of the road in (Roman) miles
 
 
 ## route_extraction.py
@@ -37,12 +37,18 @@ But it's bad practice. Please actually name the OUTPUT_FILE.
 Using the output of the first script, you can calculate a coordinate for any mile number on that road.
 Remember to set up the configuration block properly before running the script.
 Set the INPUT_FILE to the name of your OUTPUT_FILE from route_extraction.py
-Set the total length of your road in Roman miles.
+Set the total length of your road in Roman miles.*
 Set the mile number of your milestone.
 
 Then run the script. 
 The approximate coordinate of your milestone based on its mile number and caput viae will be printed in your terminal.
 
+### Finding the total length of your road in Roman miles
+This can take a bit more work, but we rely on it to make an accurate calculation.
+
+https://omnesviae.org/tabula is a very good online tool based on the Peutinger tablet. However, please be careful. Do not rely on their route-planning function to find your route-- it will find you the shortest route between point A and point B but not necessarily the route you are looking for. I would advise going segment by segment and tallying the miles up along the way. 
+
+If your route is not in the Peutinger tablet, try the Itinerarium Antonini Augusti; unfortunately there isn't a similar online tool for consulting it. 
 
 ## All Rights and Credits for the dataset go to the Itiner-e Project
 The dataset (itiner_e_land_routes_only.ndjson) used to produce the combined road asset is a modified version of the dataset published by the Itiner-e project. It is basically that dataset, but without the sea routes. I don't imagine there'd be a lot of milestones in the sea. 
