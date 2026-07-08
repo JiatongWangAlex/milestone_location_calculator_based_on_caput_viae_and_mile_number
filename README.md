@@ -49,7 +49,7 @@ Remember to set up the configuration block properly before running the script.
 
 Set the INPUT_FILE to the name of your OUTPUT_FILE from route_extraction.py
 
-Set the total length of your road in Roman miles.*
+Set the total length of your road in Roman miles. Importantly, you do not need the absolute total length of the "entire road". If you know your milestone definitely lies between the caput viae and city B, you just need the length of the road between the caput viae and city B for this calculator to work. 
 
 Set the mile number of your milestone.
 
