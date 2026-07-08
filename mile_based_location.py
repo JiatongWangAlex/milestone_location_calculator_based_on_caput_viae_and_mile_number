@@ -8,8 +8,8 @@ import math
 # =====================================================================
 
 INPUT_FILE = "bracara_augusta_to_aquae_flaviae_demo.json"  
+TARGET_ROMAN_MILES = 29       
 TOTAL_ROUTE_ROMAN_MILES = 80       
-TARGET_ROMAN_MILES = 29             
 
 
 def calculate_haversine_km(lon1, lat1, lon2, lat2):
