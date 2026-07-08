@@ -38,13 +38,13 @@ Therefore, to sidestep this paradox, my calculator uses **percentage**, instead 
 **For a milestone on the Xth mile of a road Y miles long:**
 
 
-**FIRST**: It calculates that for a road Y miles long, X miles is Z percent of its total length.
+**FIRST**: It divides X by Y, and finds that for a road Y miles long, X miles would be Z percent of its total length.
 
 
-**THEN**: it looks at the unified route asset, grabs its total length in kilometers, and multiplies the total length of the route asset by Z percent.
+**THEN**: It looks at the unified route asset (based on Itiner-e data), grabs its total length in kilometers, and multiplies the total length of the route asset by Z percent.
 
 
-**FINALLY**: it "crawls" along the route asset and finds the (Z percent x total length) km mark and prints that coordinate
+**FINALLY**: It "crawls" along the route asset and finds the (Z percent x total length) km mark of the road, and prints the coordinates of that location.
 
 
 
