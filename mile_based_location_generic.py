@@ -7,7 +7,7 @@ import math
 # CONFIGURATION 
 # =====================================================================
 
-INPUT_FILE = "bracara_augusta_to_aquae_flaviae.json"  
+INPUT_FILE = "bracara_augusta_to_aquae_flaviae_demo.json"  
 TOTAL_ROUTE_ROMAN_MILES = 80       
 TARGET_ROMAN_MILES = 29             
 
