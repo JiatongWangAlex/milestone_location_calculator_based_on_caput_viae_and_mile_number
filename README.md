@@ -89,6 +89,6 @@ THEN: it looks at the unified route asset, grabs its total length in KM, and mul
 FINALLY: it "crawls" along the route asset and finds the (Z percent x total length) km mark and prints that coordinate
 
 
-If you ever encounter a Roman milestone,  divorced from their original context, or published under a legacy place name that is no longer identifiable, for which the caput viae and mile number is known, this calculator will help you estimate where they originally stood. 
+If you ever encounter a Roman milestone (for which the caput viae and mile number is known),  divorced from its original context, or published under a legacy place name that is no longer identifiable, this calculator will help you estimate where it originally stood. 
 
 If you are interested in my thesis project (which did not end up relying on these calculations, but it was a fun detour), see https://maximinusthraxdatabaseui.streamlit.app/
