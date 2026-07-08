@@ -36,8 +36,11 @@ But it's bad practice. Please actually name the OUTPUT_FILE.
 ## mile_based_location.py
 Using the output of the first script, you can calculate a coordinate for any mile number on that road.
 Remember to set up the configuration block properly before running the script.
+
 Set the INPUT_FILE to the name of your OUTPUT_FILE from route_extraction.py
+
 Set the total length of your road in Roman miles.*
+
 Set the mile number of your milestone.
 
 Then run the script. 
