@@ -1,7 +1,68 @@
 # Milestone Location Calculator
-Two python scripts, one to stitch together a series of Itiner-e road segments into one .json asset, another to calculate the location of any milestone on that road given its mile number
+Two python scripts, one to stitch together a series of Itiner-e road segments into one .json asset, another to calculate the location of any milestone on that road given its mile number. 
 
+In order to use this calculator, you MUST know a) the caput viae of the road b) the mile number c) the Itiner-e route segments making up that road.
+
+You must run route_extraction-py first to produce the unified road asset, and then run mile_based_location.py; remember to set the correct INPUT file when you run mile_based_location.py. Right now it is using a demo route asset. 
+
+
+## route_extraction.py
+First, we need to make the unified route asset.
+
+The Itiner-e project is the "most detailed open digital dataset of roads in the entire Roman Empire". It documents tens of thousands of route segments. This calculator relies on data from Itiner-e. To make the unified route asset, you will need to copy the itiner-e ID's of the route segments making up the road your milestone served, and put them into a comma separated list in order (starting from the route segment touching your caput viae).
+
+### Using the Itiner-e site
+On the Itiner-e site, if you click on any route segment and click on the details tab to the left of your screen,
+you will see more information on the route. One of the fields in the details tab is url/uri
+
+An itiner-e url/uri looks like this 
+itiner-e.org/route-segment/27204 
+
+The final number is the route segment's itiner-e ID. They are not always 5 digits long so if yours isn't dont be alarmed.
+
+Try to track your road from start to finish on the Itiner-e Project and copy the ID of each segment as you go along.
+
+### Configuring and Running the Script
+After this, the first script can stitch all the route segments together for you. 
+
+Remember to set up the configuration block properly before running the script
+Specifically, change the name of the OUTPUT_FILE to match your road. 
+Currently the name of the OUTPUT_FILE is set to that of a demo file. Currently it is set to
+OUTPUT_FILE = "bracara_augusta_to_aquae_flaviae_demo.json"
+
+I mean technically if you forget to change the INPUT_FILE of the second script TOO, it will still work, as your new route asset will overwrite whatever was in the original demo file, assuming you downloaded it too.
+
+But it's bad practice. Please actually name the OUTPUT_FILE.
+
+
+## mile_based_location.py
+Using the output of the first script, you can calculate a coordinate for any mile number on that road.
+Remember to set up the configuration block properly before running the script.
+Set the INPUT_FILE to the name of your OUTPUT_FILE from route_extraction.py
+Set the total length of your road in Roman miles.
+Set the mile number of your milestone.
+
+Then run the script. 
+The approximate coordinate of your milestone based on its mile number and caput viae will be printed in your terminal.
+
+
+## All Rights and Credits for the dataset go to the Itiner-e Project
 The dataset (itiner_e_land_routes_only.ndjson) used to produce the combined road asset is a modified version of the dataset published by the Itiner-e project. It is basically that dataset, but without the sea routes. I don't imagine there'd be a lot of milestones in the sea. 
 
 All rights and credits for the dataset used by these scripts belong entirely to the Itiner-e project. 
 
+
+## Why did I make this?
+
+I made this because there was a cluster of milestones reused in a medieval bridge in Aquae Flaviae, 6 of which, tantalisingly, records both the caput viae of the road and the mile number. I thought this was definitely enough information for us to have a rough estimate of where they originally stood, so I made this calculator.
+
+One major design hurdle I encountered while making this calculator was the coastline paradox. The more detailed a road asset is, the "longer" it becomes due to all the kinks and bends. If we simply convert Roman miles to kms and attempt to plot the milestone at the Xth km of the very detailed Itiner-e based route asset, we would be at the mercy of the coastline paradox. 
+
+Therefore sidestep this entirely, the calculator uses percentage, not a raw conversion from Roman miles to km. 
+FIRST: It calculates the Xth mile of a road Y miles long is Zth percent of the road
+THEN: it looks at the unified route asset, grabs its total length in KM, and multiplies the total length of the route asset by Z percent.
+FINALLY: it "crawls" along the route asset and finds the (Z percent x total length) km mark and prints that coordinate
+
+If you ever encounter a Roman milestone,  divorced from their original context, or published under a legacy place name that is no longer identifiable, for which the caput viae and mile number is known, this calculator will help you estimate where they originally stood. 
+
+If you are interested in my thesis project (which did not end up relying on these calculations, but it was a fun detour), see https://maximinusthraxdatabaseui.streamlit.app/
