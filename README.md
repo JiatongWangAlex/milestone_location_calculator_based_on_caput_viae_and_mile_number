@@ -94,10 +94,10 @@ If you are interested in my thesis project (which did not end up relying on thes
 
 
 
-## How to Run the Application
+## How to Run the Scripts
 
 <details>
-<summary><b>Click here for step-by-step instructions on how to open this app using the Terminal / Command Line</b></summary>
+<summary><b>Click here for step-by-step instructions on how to open these scripts using the Terminal / Command Line</b></summary>
 
 ### Step 1: Downloading the scripts
 1) Click the green button Code to open a dropdown menu. From there, click the button download zip
@@ -139,7 +139,8 @@ Type `cd ` followed by **a space**, and then type your folder's path. See tip fo
 > **Tip:** To avoid typing out long paths manually, type `cd ` (with **a space** after it), and then **drag and drop the folder** from your desktop directly into the terminal window. It will automatically fill in the path for you! Then press **Enter**.
 
 ### Step 6: Run route_extraction.py
-Once your terminal is inside the correct directory, type one of the following commands and press **Enter** to launch the interface:
+Once your terminal is inside the correct directory, Type one of the following commands and press **Enter** to run route_extraction.py
+
 
 * **Windows:**
   ```bash
@@ -159,9 +160,12 @@ Once your terminal is inside the correct directory, type one of the following co
   ```bash
   python3 route_extraction.py
 
+If everything goes well you should see a message "SUCCESS! Full road exported to '{OUTPUT_FILE}'"
+
+If your computer tells you to install python, you can do so here. https://www.python.org/downloads/
 
 ### Step 7: Run mile_based_location.py
-Once your terminal is inside the correct directory, type one of the following commands and press **Enter** to launch the interface:
+Type one of the following commands and press **Enter** to run mile_based_location.py
 
 * **Windows:**
   ```bash
@@ -181,6 +185,12 @@ Once your terminal is inside the correct directory, type one of the following co
   ```bash
   python3 mile_based_location.py
 
+If everything goes well you should the coordinates of your milestones in the terminal in a message formatted like so
+
+e.g.
+ 29 Roman miles accounts for: 36.25% of the total route.
+Latitude:  41.665171
+Longitude: -8.157625
 
 
 </details>
