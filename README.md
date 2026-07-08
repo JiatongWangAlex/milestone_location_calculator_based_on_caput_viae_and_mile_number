@@ -1,9 +1,7 @@
 # Milestone Location Calculator
 Two python scripts, one to stitch together a series of Itiner-e road segments into one .json asset, another to calculate the location of any milestone on that road given its mile number. 
 
-In order to use this calculator, you MUST know a) the caput viae of the road b) the mile number c) the Itiner-e route segments making up that road.
-
-You must run route_extraction-py first to produce the unified road asset, and then run mile_based_location.py; remember to set the correct INPUT file when you run mile_based_location.py. Right now it is using a demo route asset. 
+In order to use this calculator, you MUST know a) the mile number of your milestone , b) the caput viae of the road your milestone served c) the Itiner-e ID's of the route segments making up that road
 
 
 ## route_extraction.py
