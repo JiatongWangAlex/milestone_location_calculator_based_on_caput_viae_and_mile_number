@@ -83,19 +83,19 @@ Try to track your road from start to finish on the Itiner-e Project and copy the
 
 Remember to paste all ID's in order into the file
 
-```
-TARGET_IDS = [
-123456, 123457, 123458, 
-]
+    ```
+    TARGET_IDS = [
+    123456, 123457, 123458, 
+    ]
 
 #### Set the starting point of the road
 Set the starting point of the route/caput viae
 You don't need to find the exact coordinates of the start of the first itiner-e road segment
 Just use the Pleiades coordinates for your caput viae.
 
-```
-START_LAT = -8.421360
-START_LON = 41.550146
+    ```
+    START_LAT = -8.421360
+    START_LON = 41.550146
 
 
 After this, the first script can stitch all the route segments together for you. 
