@@ -7,9 +7,19 @@ In order to use this calculator, you MUST know a) the (Roman) mile number of you
 ## route_extraction.py
 First, we need to make the unified route asset.
 
-The Itiner-e project is the "most detailed open digital dataset of roads in the entire Roman Empire". It documents tens of thousands of route segments. This calculator relies on data from Itiner-e. To make the unified route asset, you will need to copy the itiner-e ID's of the route segments making up the road your milestone served, and put them into a comma separated list in order (starting from the route segment touching your caput viae).
+The Itiner-e project is the "most detailed open digital dataset of roads in the entire Roman Empire". It documents tens of thousands of route segments. This calculator relies on data from Itiner-e. You must download the itiner-e nightly ndjson file (and place it in the same folder).
 
-### Using the Itiner-e site
+Go to https://itiner-e.org/about and click Download Latest Export.
+
+Please remember to change ITINER_E_FILE = to reflect the actual name of the file you downloaded. 
+
+### Identifying the relevant route segments
+ To make the unified route asset, you will need to copy the itiner-e ID's of the route segments making up the road your milestone served, and put them into a comma separated list in order (starting from the route segment touching your caput viae). Go to the Itiner-e Project site and browse the roads. 
+ 
+https://itiner-e.org/
+
+
+#### Using the Itiner-e site
 On the Itiner-e site, if you click on any route segment and click on the details tab to the left of your screen,
 you will see more information on the route. One of the fields in the details tab is url/uri
 
