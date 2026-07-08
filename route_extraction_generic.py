@@ -7,8 +7,8 @@ import math
 # CONFIGURATION 
 # =====================================================================
 
-ITINER_E_FILE = "itiner_e_land_routes_only.ndjson"
-OUTPUT_FILE = "bracara_augusta_to_aquae_flaviae.json"
+ITINER_E_FILE = "route-segments-all-1779544181149.ndjson"
+OUTPUT_FILE = "bracara_augusta_to_aquae_flaviae_demo.json"
 
 # Provide a list of the Itiner-e road segments that make up your route in order
 # Starting with the road segment that touches your starting point/caput viae-
