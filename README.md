@@ -4,6 +4,30 @@ If you ever encounter a Roman milestone (for which the caput viae and mile numbe
 
 In order to use this calculator, you MUST know a) the (Roman) mile number of your milestone, b) the caput viae of the road your milestone served c) the Itiner-e ID's of the route segments making up that road, d) the total length of the road in (Roman) miles
 
+I made this because while working on my thesis I encountered a cluster of milestones reused in a medieval bridge in Aquae Flaviae; 6 of which, tantalisingly, records both the caput viae of the road and the mile number. I thought this was definitely enough information for us to have a rough estimate of where they originally stood, so I made this calculator.
+
+
+One major design hurdle I encountered while making this calculator was the coastline paradox. The more detailed a road asset is, the "longer" it becomes due to all the kinks and bends. If we simply convert Roman miles to kms and attempt to plot the milestone at the Xth km of the very detailed Itiner-e based route asset, we would be at the mercy of the coastline paradox. 
+
+Therefore, to sidestep this entirely, the calculator uses percentage, not a raw conversion from Roman miles to kilometers. 
+
+For a milestone on the Xth mile of a road Y miles long:
+
+
+**FIRST**: It calculates that for a road Y miles long, X miles is Z percent of its total length.
+
+
+**THEN**: it looks at the unified route asset, grabs its total length in kilometers, and multiplies the total length of the route asset by Z percent.
+
+
+**FINALLY**: it "crawls" along the route asset and finds the (Z percent x total length) km mark and prints that coordinate
+
+
+If you ever encounter a Roman milestone (for which the caput viae and mile number is known),  divorced from its original context, or published under a legacy place name that is no longer identifiable, this calculator will help you estimate where it originally stood. 
+
+If you are interested in my thesis project (which did not end up relying on these calculations, but it was a fun detour), see https://maximinusthraxdatabaseui.streamlit.app/
+
+
 
 ## route_extraction.py
 First, we need to make the unified route asset.
@@ -67,32 +91,6 @@ https://omnesviae.org/tabula is a very good online tool based on the Peutinger t
 
 
 If your route is not in the Peutinger tablet, try the Itinerarium Antonini Augusti; unfortunately there isn't a similar online tool for consulting it. 
-
-## Why did I make this?
-
-I made this because there was a cluster of milestones reused in a medieval bridge in Aquae Flaviae; 6 of which, tantalisingly, records both the caput viae of the road and the mile number. I thought this was definitely enough information for us to have a rough estimate of where they originally stood, so I made this calculator.
-
-
-One major design hurdle I encountered while making this calculator was the coastline paradox. The more detailed a road asset is, the "longer" it becomes due to all the kinks and bends. If we simply convert Roman miles to kms and attempt to plot the milestone at the Xth km of the very detailed Itiner-e based route asset, we would be at the mercy of the coastline paradox. 
-
-Therefore, to sidestep this entirely, the calculator uses percentage, not a raw conversion from Roman miles to kilometers. 
-
-For a milestone on the Xth mile of a road Y miles long:
-
-
-**FIRST**: It calculates that for a road Y miles long, X miles is Z percent of its total length.
-
-
-**THEN**: it looks at the unified route asset, grabs its total length in kilometers, and multiplies the total length of the route asset by Z percent.
-
-
-**FINALLY**: it "crawls" along the route asset and finds the (Z percent x total length) km mark and prints that coordinate
-
-
-If you ever encounter a Roman milestone (for which the caput viae and mile number is known),  divorced from its original context, or published under a legacy place name that is no longer identifiable, this calculator will help you estimate where it originally stood. 
-
-If you are interested in my thesis project (which did not end up relying on these calculations, but it was a fun detour), see https://maximinusthraxdatabaseui.streamlit.app/
-
 
 
 
