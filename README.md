@@ -75,8 +75,10 @@ One major design hurdle I encountered while making this calculator was the coast
 
 Therefore, to sidestep this entirely, the calculator uses percentage, not a raw conversion from Roman miles to km. 
 
+For a milestone on the Xth mile of a road Y miles long:
 
-FIRST: It calculates the Xth mile of a road Y miles long is Zth percent of the road
+
+FIRST: It calculates that for a road Y miles long, X miles is Z percent of its total length.
 
 
 THEN: it looks at the unified route asset, grabs its total length in KM, and multiplies the total length of the route asset by Z percent.
