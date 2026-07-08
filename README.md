@@ -81,10 +81,10 @@ Try to track your road from start to finish on the Itiner-e Project and copy the
 
 Remember to paste all ID's in order into the file
 
-     ```bash
-      TARGET_IDS = [
-      123456, 123457, 123458, 
-      ]
+     ```
+     TARGET_IDS = [
+     123456, 123457, 123458, 
+     ]
 
 
 ### Configuring and Running the Script
