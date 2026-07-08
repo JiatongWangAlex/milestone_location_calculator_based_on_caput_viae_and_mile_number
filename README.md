@@ -20,9 +20,9 @@ I made this because while working on my thesis I encountered a cluster of milest
 
 ### The Problem
 
-One major design hurdle I encountered while making this calculator was the **coastline paradox**. 
+One major design hurdle I encountered while making this calculator was the **Richardson Effect/coastline paradox**. 
 
-The more detailed a road asset is, the "longer" it becomes due to all the kinks and bends. If we simply convert Roman miles to kms and attempt to plot the milestone at the Xth km of the very detailed Itiner-e based route asset, we would be very far off. 
+Basically, the more detailed a road asset is, the longer it becomes due to all the kinks and bends. If we simply convert Roman miles to kms and attempt to plot the milestone at the Xth km of the very detailed Itiner-e based route asset, we would be very far off. 
 
 For example, according to the Itinerarium Antonini Augusti, the road between Bracara Augusta and Aquae Flaviae is **80 Roman miles** long (20+26+16+18=80) 
 
