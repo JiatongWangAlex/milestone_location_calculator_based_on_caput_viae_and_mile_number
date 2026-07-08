@@ -61,13 +61,15 @@ Go to https://itiner-e.org/about and click Download Latest Export.
 
 Please remember to change ITINER_E_FILE = to reflect the actual name of the file you downloaded. 
 
-### Identifying the relevant Itiner-e route segments
+### Configuring and Running the Script
+
+#### Identifying the relevant Itiner-e route segments and setting TARGET_IDS = [...]
  To make the unified route asset, you will need to copy the itiner-e ID's of the route segments making up the road your milestone served, and put them into a comma separated list in order (starting from the route segment touching your caput viae). Go to the Itiner-e Project site and browse the roads. 
  
 https://itiner-e.org/
 
 
-#### Using the Itiner-e site
+##### Using the Itiner-e site
 On the Itiner-e site, if you click on any route segment and click on the details tab to the left of your screen,
 you will see more information on the route. One of the fields in the details tab is url/uri
 
@@ -81,15 +83,24 @@ Try to track your road from start to finish on the Itiner-e Project and copy the
 
 Remember to paste all ID's in order into the file
 
-     ```
-     TARGET_IDS = [
-     123456, 123457, 123458, 
-     ]
+```
+TARGET_IDS = [
+123456, 123457, 123458, 
+]
+
+#### Set the starting point of the road
+Set the starting point of the route/caput viae
+You don't need to find the exact coordinates of the start of the first itiner-e road segment
+Just use the Pleiades coordinates for your caput viae.
+
+```
+START_LAT = -8.421360
+START_LON = 41.550146
 
 
-### Configuring and Running the Script
 After this, the first script can stitch all the route segments together for you. 
 
+#### Rename OUTPUT_FILE
 Remember to set up the configuration block properly before running the script
 Specifically, change the name of the OUTPUT_FILE to match your road. 
 Currently the name of the OUTPUT_FILE is set to that of a demo file ("bracara_augusta_to_aquae_flaviae_demo.json")
@@ -102,23 +113,31 @@ Using the output of the first script, you can calculate a coordinate for any mil
 Remember to set up the configuration block properly before running the script.
 
 Set the INPUT_FILE to the name of your OUTPUT_FILE from route_extraction.py
+### Rename INPUT_FILE
 
-Set the total length of your road in Roman miles. **Importantly**, you do not need the absolute total length of the "entire road". If you know your milestone definitely lies between the caput viae and city B, you just need the length of the road between the caput viae and city B for this calculator to work. 
-
-Set the mile number of your milestone.
-
-Then run the script.
+### Set Mile Number
 
 
-The approximate coordinate of your milestone based on its mile number and caput viae will be printed in your terminal.
+### Set Total Route Length
 
-### Finding the total length of your road in Roman miles
+Set the total length of your road in Roman miles. 
+
 This can take a bit more work, but we rely on it to make an accurate calculation. 
 
 https://omnesviae.org/tabula is a very good online tool based on the Peutinger tablet. However, please be careful. Do not rely on their route-planning function to find your route-- it will find you the shortest route between point A and point B but not necessarily the route you are looking for. I would advise going segment by segment and tallying the miles up along the way. 
 
 
 If your route is not in the Peutinger tablet, try the Itinerarium Antonini Augusti; unfortunately there isn't a similar online tool for consulting it. 
+
+**Importantly**, you do not need the absolute total length of the "entire road". If you know your milestone definitely lies between the caput viae and city B, you just need the length of the road between the caput viae and city B for this calculator to work. 
+
+
+
+
+Then run the script.
+
+
+The approximate coordinate of your milestone based on its mile number and caput viae will be printed in your terminal.
 
 
 
