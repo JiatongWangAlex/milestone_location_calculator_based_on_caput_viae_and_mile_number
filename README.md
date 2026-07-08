@@ -114,13 +114,19 @@ If you are interested in my thesis project (which did not end up relying on thes
 
 
     ITINER_E_FILE = "name_of_your_download.ndjson"
+
+
     OUTPUT_FILE = "name_of_your_road.json"
 
 
-2) Open mile_based_location.py, edit the Configuration block at the very top so that
+3) Open mile_based_location.py, edit the Configuration block at the very top so that
 
     INPUT_FILE = "name_of_your_road.json"
-    TOTAL_ROUTE_ROMAN_MILES = total length of the route in Roman miles   
+
+   
+    TOTAL_ROUTE_ROMAN_MILES = total length of the route in Roman miles
+
+   
     TARGET_ROMAN_MILES = mile number of your milestone      
 
 
