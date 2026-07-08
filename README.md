@@ -151,20 +151,11 @@ Once your terminal is inside the correct directory, Type one of the following co
 * **Windows:**
   ```bash
   python route_extraction.py
-
-* or
-  
-  ```bash
-  python route_extraction.py
   
 * **Mac and Linux**
   ```bash
   python3 route_extraction.py
 
-* or
-  
-  ```bash
-  python3 route_extraction.py
 
 If everything goes well you should see a message "SUCCESS! Full road exported to '{OUTPUT_FILE}'"
 
@@ -177,19 +168,11 @@ Type one of the following commands and press **Enter** to run mile_based_locatio
   ```bash
   python mile_based_location.py
 
-* or
-  
-  ```bash
-  python mile_based_location.py
   
 * **Mac and Linux**
   ```bash
   python3 mile_based_location.py
 
-* or
-  
-  ```bash
-  python3 mile_based_location.py
 
 If everything goes well you should the coordinates of your milestones in the terminal in a message formatted like so
 
