@@ -79,13 +79,13 @@ Therefore, to sidestep this entirely, the calculator uses percentage, not a raw 
 For a milestone on the Xth mile of a road Y miles long:
 
 
-FIRST: It calculates that for a road Y miles long, X miles is Z percent of its total length.
+**FIRST**: It calculates that for a road Y miles long, X miles is Z percent of its total length.
 
 
-THEN: it looks at the unified route asset, grabs its total length in kilometers, and multiplies the total length of the route asset by Z percent.
+**THEN**: it looks at the unified route asset, grabs its total length in kilometers, and multiplies the total length of the route asset by Z percent.
 
 
-FINALLY: it "crawls" along the route asset and finds the (Z percent x total length) km mark and prints that coordinate
+**FINALLY**: it "crawls" along the route asset and finds the (Z percent x total length) km mark and prints that coordinate
 
 
 If you ever encounter a Roman milestone (for which the caput viae and mile number is known),  divorced from its original context, or published under a legacy place name that is no longer identifiable, this calculator will help you estimate where it originally stood. 
