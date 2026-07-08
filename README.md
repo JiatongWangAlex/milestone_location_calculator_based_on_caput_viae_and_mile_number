@@ -38,12 +38,8 @@ After this, the first script can stitch all the route segments together for you.
 
 Remember to set up the configuration block properly before running the script
 Specifically, change the name of the OUTPUT_FILE to match your road. 
-Currently the name of the OUTPUT_FILE is set to that of a demo file. Currently it is set to
-OUTPUT_FILE = "bracara_augusta_to_aquae_flaviae_demo.json"
+Currently the name of the OUTPUT_FILE is set to that of a demo file ("bracara_augusta_to_aquae_flaviae_demo.json")
 
-I mean technically if you forget to change the INPUT_FILE of the second script TOO, it will still work, as your new route asset will overwrite whatever was in the original demo file, assuming you downloaded it too.
-
-But it's bad practice. Please actually name the OUTPUT_FILE.
 
 
 ## mile_based_location.py
