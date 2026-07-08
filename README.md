@@ -44,7 +44,7 @@ Then run the script.
 The approximate coordinate of your milestone based on its mile number and caput viae will be printed in your terminal.
 
 ### Finding the total length of your road in Roman miles
-This can take a bit more work, but we rely on it to make an accurate calculation.
+This can take a bit more work, but we rely on it to make an accurate calculation. 
 
 https://omnesviae.org/tabula is a very good online tool based on the Peutinger tablet. However, please be careful. Do not rely on their route-planning function to find your route-- it will find you the shortest route between point A and point B but not necessarily the route you are looking for. I would advise going segment by segment and tallying the miles up along the way. 
 
