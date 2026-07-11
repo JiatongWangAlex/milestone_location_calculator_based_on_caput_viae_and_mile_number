@@ -5,13 +5,13 @@ If you ever encounter a Roman milestone **(for which the caput viae and mile num
 In order to use this calculator, you MUST know 
 
 
-**a) the (Roman) mile number of your milestone,**
+**a) the mile number**
 
-**b) the caput viae of the road your milestone served**
+**b) the city of reference (i.e. the caput viae of the road your milestone served)**
 
-**c) the road it belonged to, and the Itiner-e ID's of the route segments making up that road**
+**c) the road your milestone belonged to, and the Itiner-e ID's of the route segments making up that road**
 
-**d) the total length of the road in (Roman) miles**
+**d) the "total length" of the road in (Roman) miles**
 
 # How it works
 
