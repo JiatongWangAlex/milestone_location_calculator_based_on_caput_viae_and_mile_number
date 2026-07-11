@@ -9,7 +9,7 @@ In order to use this calculator, you MUST know
 
 **b) the caput viae of the road your milestone served**
 
-**c) the Itiner-e ID's of the route segments making up that road**
+**c) the road it belonged to, and the Itiner-e ID's of the route segments making up that road**
 
 **d) the total length of the road in (Roman) miles**
 
